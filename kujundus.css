@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* logo + otsing */
+.pais {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 1000px;
+  margin: 30px auto 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 80px;
+  background: #4a86c8;
+  color: #fff;
+  text-decoration: none;
+}
+
+.otsing {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  padding: 10px;
+  background: #7ba7dc;
+}
+
+.otsing-silt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #eee;
+}
+
+.otsing-sisend {
+  flex: 1;
+  font-size: 20px;
+}
+
+/* Kategooriate tabel */
+.sisu {
+  max-width: 1000px;
+  margin: 0px auto;
+}
+
+.kategooriad {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.kategooriad td {
+  vertical-align: top;
+  padding: 20px;
+}
+
+.kategooriad h2 {
+  font-size: 24px;
+}
+
+.kategooriad h2 a {
+  color: #2f5f94;
+  text-decoration: none;
+}
+
+.kategooriad h2 a:hover {
+  text-decoration: underline;
+}
+
+.kategooriad p {
+  font-size: 15px;
+}
