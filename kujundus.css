@@ -23,6 +23,7 @@ body {
   background: #074990;
   color: #fff;
   text-decoration: none;
+  object-fit: none;
 }
 
 .otsing {
