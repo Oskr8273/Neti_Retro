@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaheleht 1</title>
+    <title>Vaheleht 1 – Kategooriad</title>
+    <link rel="stylesheet" href="kujundus.css">
 </head>
 <body>
-    Siin on vaheleht 1 sisu. Siia tuleb lisada rohkem sisu ja kujundust vastavalt vajadusele.
+    <header class="pais">
+        <a href="netipealeht.html" class="logo">LOGO</a>
+        <form class="otsing" action="https://www.google.com/search" method="get">
+            <label class="otsing-silt">Google</label>
+            <input type="text" name="q" class="otsing-sisend" placeholder="Sisesta otsing">
+        </form>
+    </header>
+
+    <main class="sisu">
+        <h1>Vaheleht 1: Kategooriad</h1>
+        <p><a href="netipealeht.html">Tagasi pealehele</a> | <a href="vaheleht2.html">Vaheleht 2</a></p>
+
+        <table class="kategooriad">
+            <tr>
+                <td>
+                    <h2>Kategooria 1</h2>
+                    <p>Siia tuleb esimese kategooria sisu, pildid või lingid.</p>
+                </td>
+                <td>
+                    <h2>Kategooria 2</h2>
+                    <p>Siia tuleb teise kategooria sisu, pildid või lingid.</p>
+                </td>
+            </tr>
+        </table>
+    </main>
 </body>
 </html>
