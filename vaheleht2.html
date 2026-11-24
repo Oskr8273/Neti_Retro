@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaheleht 2</title>
+    <title>Vaheleht 2 – Teemad ja pildid</title>
+    <link rel="stylesheet" href="kujundus.css">
 </head>
 <body>
-    Siin on vaheleht 2. Siia tuleb lisada rohkem sisu ja kujundust vastavalt vajadusele.
+    <header class="pais">
+        <a href="netipealeht.html" class="logo">LOGO</a>
+        <form class="otsing" action="https://www.google.com/search" method="get">
+            <label class="otsing-silt">Google</label>
+            <input type="text" name="q" class="otsing-sisend" placeholder="Sisesta otsing">
+        </form>
+    </header>
+
+    <main class="sisu">
+        <h1>Vaheleht 2: Teemakategooriad</h1>
+        <p><a href="netipealeht.html">Tagasi pealehele</a> | <a href="vaheleht1.html">Vaheleht 1</a></p>
+
+        <table class="kategooriad">
+            <tr>
+                <td>
+                    <h2>Pildid ja kategooriad</h2>
+                    <p>Siia saab lisada teemakohaseid pilte ja kirjeldusi.</p>
+                </td>
+                <td>
+                    <h2>Kasulikud viited</h2>
+                    <ul>
+                        <li><a href="https://duckduckgo.com">DuckDuckGo</a></li>
+                        <li><a href="https://ut.ee">Tartu Ülikool</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </main>
 </body>
 </html>
