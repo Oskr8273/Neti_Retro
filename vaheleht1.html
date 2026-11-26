@@ -3,34 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaheleht 1 – Kategooriad</title>
+    <title>Vaheleht 1 – Tudengi õppekeskkonnad</title>
     <link rel="stylesheet" href="kujundus.css">
 </head>
 <body>
     <header class="pais">
         <a href="netipealeht.html" class="logo">LOGO</a>
-        <form class="otsing" action="https://www.google.com/search" method="get">
-            <label class="otsing-silt">Google</label>
+        <form id="otsinguvorm" class="otsing" action="https://www.google.com/search" method="get">
+            <select id="otsingumootor" class="otsing-silt" aria-label="Vali otsingumootor">
+                <option value="https://www.google.com/search" selected>Google</option>
+                <option value="https://duckduckgo.com/">DuckDuckGo</option>
+                <option value="https://www.ecosia.org/search">Ecosia</option>
+            </select>
             <input type="text" name="q" class="otsing-sisend" placeholder="Sisesta otsing">
         </form>
     </header>
 
     <main class="sisu">
-        <h1>Vaheleht 1: Kategooriad</h1>
-        <p><a href="netipealeht.html">Tagasi pealehele</a> | <a href="vaheleht2.html">Vaheleht 2</a></p>
+        <h1>Vaheleht 1: Tudengi õppekeskkonnad</h1>
+        <p><a href="netipealeht.html">&larr; Tagasi pealehele</a> | <a href="vaheleht2.html">Vaheleht 2 &rarr;</a></p>
 
         <table class="kategooriad">
             <tr>
                 <td>
-                    <h2>Kategooria 1</h2>
-                    <p>Siia tuleb esimese kategooria sisu, pildid või lingid.</p>
+                    <h2><a href="https://ois2.ut.ee">ÕIS2</a></h2>
+                    <p>Tartu Ülikooli õppeinfosüsteem ainetele registreerimiseks, tunniplaani jälgimiseks ja tulemuste vaatamiseks.</p>
                 </td>
                 <td>
-                    <h2>Kategooria 2</h2>
-                    <p>Siia tuleb teise kategooria sisu, pildid või lingid.</p>
+                    <h2><a href="https://moodle.ut.ee">Moodle</a></h2>
+                    <p>E-õppe keskkond loenguslaidide, praktikumijuhendite, foorumite ja kodutööde esitamiseks.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2><a href="https://utlib.ut.ee">TÜ Raamatukogu</a></h2>
+                    <p>Teadusandmebaasid, e-kataloog ESTER ja rühmatööruumide broneerimine.</p>
+                </td>
+                <td>
+                    <h2><a href="https://courses.cs.ut.ee">Courses (Arvutiteaduse instituut)</a></h2>
+                    <p>Informaatika ja veebilehe projekti kursuste materjalid ning hindamismaatriksid.</p>
                 </td>
             </tr>
         </table>
     </main>
+
+    <script>
+        const vorm = document.getElementById("otsinguvorm");
+        const valik = document.getElementById("otsingumootor");
+
+        valik.addEventListener("change", function () {
+            vorm.action = valik.value;
+        });
+    </script>
 </body>
 </html>
