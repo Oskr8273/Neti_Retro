@@ -3,37 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaheleht 2 – Teemad ja pildid</title>
+    <title>Vaheleht 2 – Arendustööriistad ja otsing</title>
     <link rel="stylesheet" href="kujundus.css">
 </head>
 <body>
     <header class="pais">
         <a href="netipealeht.html" class="logo">LOGO</a>
-        <form class="otsing" action="https://www.google.com/search" method="get">
-            <label class="otsing-silt">Google</label>
+        <form id="otsinguvorm" class="otsing" action="https://www.google.com/search" method="get">
+            <select id="otsingumootor" class="otsing-silt" aria-label="Vali otsingumootor">
+                <option value="https://www.google.com/search" selected>Google</option>
+                <option value="https://duckduckgo.com/">DuckDuckGo</option>
+                <option value="https://www.ecosia.org/search">Ecosia</option>
+            </select>
             <input type="text" name="q" class="otsing-sisend" placeholder="Sisesta otsing">
         </form>
     </header>
 
     <main class="sisu">
-        <h1>Vaheleht 2: Teemakategooriad</h1>
-        <p><a href="netipealeht.html">Tagasi pealehele</a> | <a href="vaheleht1.html">Vaheleht 1</a></p>
+        <h1>Vaheleht 2: Veebiarendus ja kasulikud viited</h1>
+        <p><a href="netipealeht.html">&larr; Tagasi pealehele</a> | <a href="vaheleht1.html">&larr; Vaheleht 1</a></p>
 
         <table class="kategooriad">
             <tr>
                 <td>
-                    <h2>Pildid ja kategooriad</h2>
-                    <p>Siia saab lisada teemakohaseid pilte ja kirjeldusi.</p>
+                    <h2>Koodi kontroll ja versioonihaldus</h2>
+                    <ul>
+                        <li><a href="https://validator.w3.org">W3C HTML Validaator</a> – HTML-koodi vigade kontrollimiseks.</li>
+                        <li><a href="https://jigsaw.w3.org/css-validator/">W3C CSS Validaator</a> – kujundusfaili kontrollimiseks.</li>
+                        <li><a href="https://github.com">GitHub</a> – rühmatöö failide ja harude haldamiseks.</li>
+                    </ul>
                 </td>
                 <td>
-                    <h2>Kasulikud viited</h2>
+                    <h2>Privaatsed otsingumootorid</h2>
                     <ul>
-                        <li><a href="https://duckduckgo.com">DuckDuckGo</a></li>
-                        <li><a href="https://ut.ee">Tartu Ülikool</a></li>
+                        <li><a href="https://duckduckgo.com">DuckDuckGo</a> – otsingumootor ilma jälgimiseta.</li>
+                        <li><a href="https://www.ecosia.org">Ecosia</a> – keskkonnasõbralik otsingumootor.</li>
+                        <li><a href="https://et.wikipedia.org">Eestikeelne Vikipeedia</a> – kiire teatmeallikas.</li>
                     </ul>
                 </td>
             </tr>
         </table>
     </main>
+
+    <script>
+        const vorm = document.getElementById("otsinguvorm");
+        const valik = document.getElementById("otsingumootor");
+
+        valik.addEventListener("change", function () {
+            vorm.action = valik.value;
+        });
+    </script>
 </body>
 </html>
