@@ -23,6 +23,7 @@ body {
   background: #074990;
   color: #fff;
   text-decoration: none;
+  object-fit: none;
 }
 
 .otsing {
@@ -59,7 +60,7 @@ body {
 
 .kategooriad td {
   vertical-align: top;
-  padding: 20px;
+  padding: 5px;
 }
 
 .kategooriad h2 {
